@@ -1,12 +1,62 @@
-# React + Vite
+# My Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React Todo application integrated with Supabase for authentication and data storage. It features user signup/login with magic link, todo CRUD operations with filtering and sorting, and remembers user sessions.
 
-Currently, two official plugins are available:
+## Live Demo
+[https://my-todo-app-xwm2.vercel.app/](https://my-todo-app-xwm2.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- User signup/login using Supabase magic link authentication
+- Add, edit, delete todos
+- Filter todos by category, status (pending/completed), and search query
+- Sort todos by due date or priority
+- Responsive and visually appealing UI with gradients and modern styles
+- Persistent login session
 
-## Expanding the ESLint configuration
+## Setup and Run Locally
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+```bash
+git clone <https://github.com/venkatsai03/my-todo-app.git>
+cd my-todo-app
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Create a `.env` file in the root with your Supabase keys:
+```
+VITE_SUPABASE_URL=your_supabase_url_here
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key_here
+```
+
+4. Run the development server:
+```bash
+npm run dev
+```
+
+5. Build for production:
+```bash
+npm run build
+```
+
+## Deployment
+
+You can deploy this app on Vercel or any static hosting provider supporting environment variables.
+
+For Vercel:
+
+- Connect your GitHub repo
+- Add environment variables `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` in the Vercel dashboard
+- Deploy
+
+## Important Notes
+
+- Make sure to whitelist your deployed domain in Supabase authentication settings for magic links
+- The app uses port 5173 by default when running locally with Vite
+
+## Contact
+
+For issues or questions, contact: menthanavenkatsai@gmail.com
